@@ -52,7 +52,9 @@ query.py loads these files at import time so they must exist before starting the
 Use Scrapy to crawl documents and store results:
 
 bash
+
 scrapy crawl document_spider -O crawled_data.json
+
 document_spider should be defined in your Scrapy project and configured to save HTML pages into crawler/crawler/pages/ (as used by indexer.py and app.py).​
 
 The -O crawled_data.json flag overwrites the JSON file on each run with structured results such as URL, title, and cleaned text.
