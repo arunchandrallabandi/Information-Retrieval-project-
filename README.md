@@ -63,7 +63,9 @@ The -O crawled_data.json flag overwrites the JSON file on each run with structur
 Once pages are available under crawler/crawler/pages/, build the TF‑IDF index:
 
 bash
+
 python indexer.py
+
 indexer.py scans the pages directory, reads each file, and collects their contents into a document list.​
 
 It fits a TfidfVectorizer (with English stopwords) and serializes the vectorizer, matrix, and filenames into .pkl files for later use.​
@@ -72,7 +74,9 @@ It fits a TfidfVectorizer (with English stopwords) and serializes the vectorizer
 After the index is built, launch the Flask web application:
 
 bash
+
 python app.py
+
 The app creates a Flask server and loads search and suggest from query.py, which in turn load the TF‑IDF artifacts.​
 
 By default the app runs in debug mode and listens on http://127.0.0.1:5000.​
