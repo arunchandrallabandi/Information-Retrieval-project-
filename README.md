@@ -103,7 +103,9 @@ Ensure the Flask app is running on http://127.0.0.1:5000 before running tests.�
 Then, in another terminal, run:
 
 bash
+
 python test_ir_sytem.py
+
 The script issues HTTP requests to the server (search POSTs, suggestion GETs, page GETs) using requests.​
 
 It checks search endpoint availability, snippet highlighting (<mark> tags), auto‑suggestion behavior, “Read More” link validity, multiple sequential queries, and rare query term handling, printing a simple test report to stdout.​
